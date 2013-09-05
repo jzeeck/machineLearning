@@ -99,7 +99,56 @@ def part(data, frac):
 	p = int(len(ldata) * frac)
 	return ldata[:p], ldata[p:]
 
-monk1train, monk1val = part(m.monk1, 0.6)
+splits = [0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+
+print "-----  Mock1  -----"
+for split in splits:
+  monk1train, monk1val = part(m.monk1, split)
+
+  bestTree = dt.buildTree(monk1val,m.attributes)
+  bestClassification = dt.check(bestTree,monk1train)
+  foundBetter = True
+  numberOfPrunes = 0
+
+  while foundBetter:
+    foundBetter = False
+    for subTree in dt.allPruned(bestTree):
+      if dt.check(subTree,monk1train) > bestClassification:
+        bestClassification = dt.check(subTree,monk1train)
+        bestTree = subTree
+        foundBetter = True
+    if foundBetter:
+      numberOfPrunes += 1
+
+  print "Best tree found with split = ", split, ", pruned ", numberOfPrunes, " times"
+  print bestTree
+  print "%.5f"%bestClassification
+
+print
+
+
+print "-----  Mock3  -----"
+for split in splits:
+  monk3train, monk3val = part(m.monk3, split)
+
+  bestTree = dt.buildTree(monk3val,m.attributes)
+  bestClassification = dt.check(bestTree,monk3train)
+  foundBetter = True
+  numberOfPrunes = 0
+
+  while foundBetter:
+    foundBetter = False
+    for subTree in dt.allPruned(bestTree):
+      if dt.check(subTree,monk3train) > bestClassification:
+        bestClassification = dt.check(subTree,monk3train)
+        bestTree = subTree
+        foundBetter = True
+    if foundBetter:
+      numberOfPrunes += 1
+
+  print "Best tree found with split = ", split, ", pruned ", numberOfPrunes, " times"
+  print bestTree
+  print "%.5f"%bestClassification
 
 print
 print "------------------------------"
