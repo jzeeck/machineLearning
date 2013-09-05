@@ -30,5 +30,16 @@ for x in range(0, 6):
   gain_monk2.append(dt.averageGain(datasets[1],m.attributes[x]))
   gain_monk3.append(dt.averageGain(datasets[2],m.attributes[x]))
 
+print "Monk1:"," ".join([str(y) for y in gain_monk1])
+print "Monk2:"," ".join([str(y) for y in gain_monk2])
+print "Monk3:"," ".join([str(y) for y in gain_monk3])
 
-#dt.averageGain(monk1)
+print
+print "------------------------------"
+
+print "Assignment 3"
+print ""
+
+
+print
+print "------------------------------"
