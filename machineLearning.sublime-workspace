@@ -1,0 +1,434 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"m",
+				"monk1"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"d",
+				"drawtree"
+			],
+			[
+				"a",
+				"attributes"
+			],
+			[
+				"par",
+				"partition1"
+			],
+			[
+				"pa",
+				"partition0"
+			],
+			[
+				"mon",
+				"monk1"
+			],
+			[
+				"mo",
+				"monk2"
+			],
+			[
+				"Mon",
+				"Monk1"
+			],
+			[
+				"gain",
+				"gain_monk1"
+			],
+			[
+				"in",
+				"init_entropy_monk1"
+			],
+			[
+				"de",
+				"DieWithError"
+			],
+			[
+				"ser",
+				"server_pid"
+			],
+			[
+				"c",
+				"cout"
+			],
+			[
+				"p",
+				"p_number"
+			],
+			[
+				"sho",
+				"short_string"
+			],
+			[
+				"ma",
+				"main	main()"
+			],
+			[
+				"nu",
+				"number_of_tests"
+			],
+			[
+				"st",
+				"stream"
+			],
+			[
+				"r",
+				"return"
+			],
+			[
+				"pri",
+				"print_results"
+			],
+			[
+				"p_",
+				"p_x"
+			],
+			[
+				"be",
+				"beginend	$1.begin(), $1.end()"
+			],
+			[
+				"cou",
+				"count"
+			],
+			[
+				"co",
+				"cout"
+			],
+			[
+				"v",
+				"vec2"
+			],
+			[
+				"inde",
+				"index_one"
+			],
+			[
+				"min",
+				"min_index"
+			],
+			[
+				"le",
+				"left_index"
+			],
+			[
+				"end",
+				"endl"
+			],
+			[
+				"gameO",
+				"gameObject"
+			],
+			[
+				"y",
+				"y_speed"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"W",
+				"WINDOW_HEIGHT"
+			],
+			[
+				"max",
+				"max_speed"
+			],
+			[
+				"x",
+				"x_speed"
+			],
+			[
+				"curren",
+				"currentTime"
+			],
+			[
+				"cur",
+				"currentTime"
+			],
+			[
+				"pre",
+				"previousTime"
+			],
+			[
+				"cu",
+				"currentTime"
+			],
+			[
+				"i",
+				"include"
+			],
+			[
+				"spe",
+				"speed"
+			],
+			[
+				"Wid",
+				"WINDOW_HEIGHT"
+			],
+			[
+				"s",
+				"speed"
+			],
+			[
+				"re",
+				"reshape"
+			],
+			[
+				"pla",
+				"player"
+			],
+			[
+				"pl",
+				"player"
+			],
+			[
+				"w",
+				"WINDOW_WIDTH"
+			],
+			[
+				"game",
+				"gameObject"
+			],
+			[
+				"gam",
+				"gameObject"
+			],
+			[
+				"ga",
+				"gameObject"
+			],
+			[
+				"Wi",
+				"WINDOW_HEIGHT"
+			],
+			[
+				"ic",
+				"include"
+			],
+			[
+				"arg",
+				"argc"
+			],
+			[
+				"ar",
+				"argv"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Johan/Projects/machineLearning/lab1/drawtree.py",
+		"/Users/Johan/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/etc/paths",
+		"/Users/Johan/.profile",
+		"/Users/Johan/Projects/machineLearning/lab1/makefile",
+		"/Users/Johan/Projects/machineLearning/lab1/README",
+		"/Users/Johan/Projects/private_bay/boost_start.cpp",
+		"/Users/Johan/Projects/private_bay/makefile",
+		"/Users/Johan/Projects/private_bay/.gitignore",
+		"/Users/Johan/Projects/private_bay/async_tcp_echo_server.cpp",
+		"/Users/Johan/Projects/private_bay/server/acceptTCPConnections.h",
+		"/Users/Johan/Projects/private_bay/server/dieWithError.c",
+		"/Users/Johan/Projects/private_bay/server/dieWithError.h",
+		"/Users/Johan/Projects/private_bay/server/acceptTCPConnection.c",
+		"/Users/Johan/Projects/private_bay/server/createTCPServerSocket.c",
+		"/Users/Johan/Projects/private_bay/server/ares.cpp",
+		"/Users/Johan/Projects/private_bay/server/createTCPServerSocket.h",
+		"/Users/Johan/Projects/private_bay/server/ares.h",
+		"/Users/Johan/Projects/private_bay/README.md",
+		"/Users/Johan/Projects/private_bay/server/main.cpp",
+		"/Users/Johan/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/Johan/Projects/private_bay/server/ares_worker.cpp",
+		"/Users/Johan/Projects/private_bay/server/ares_worker.h",
+		"/Users/Johan/.bash_profile",
+		"/private/etc/hosts",
+		"/Users/Johan/a.out",
+		"/Users/Johan/test.cpp",
+		"/Users/Johan/test.s",
+		"/Users/Johan/Dropbox/asteroids/gameObjects/asteroids.cpp",
+		"/Users/Johan/Dropbox/asteroids/makefile",
+		"/Users/Johan/Dropbox/asteroids/gameObjects/gameObject.h",
+		"/Users/Johan/Dropbox/asteroids/gameObjects/player.h",
+		"/Users/Johan/Dropbox/asteroids/gameObjects/player.cpp",
+		"/Users/Johan/Dropbox/asteroids/main.h",
+		"/Users/Johan/Dropbox/asteroids/main.cpp",
+		"/Users/Johan/Dropbox/hongkong/advancedProgramming/sorter/sorter.h",
+		"/Users/Johan/Dropbox/asteroids/gameObjects/shoot.h",
+		"/Users/Johan/Dropbox/asteroids/gameObjects/shoot.cpp",
+		"/Users/Johan/Dropbox/asteroids/game_objects/game_object.h",
+		"/Users/Johan/Dropbox/asteroids/game_objects/game_object.cpp"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"datasets[2]",
+			"datasets[1]",
+			"datasets[0]",
+			"\"------------------------------\"",
+			"tree",
+			"  ",
+			"    ",
+			"  ",
+			"    ",
+			"socket",
+			"clntLen",
+			"inden",
+			"tab",
+			"clntSock",
+			"    ",
+			"private_bay",
+			"sock",
+			"ifndef",
+			"    ",
+			"     ",
+			"    ",
+			"RandomAccessIterator",
+			"left_index",
+			"	\n",
+			"    ",
+			"cin",
+			"    ",
+			" {",
+			"    ",
+			"()\n",
+			"sin",
+			"50",
+			";\n",
+			"    ",
+			"sin",
+			"20",
+			"update",
+			");\n",
+			"  ",
+			"        "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"T",
+			"index_one"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 231.0,
+	"status_bar_visible": true
+}
