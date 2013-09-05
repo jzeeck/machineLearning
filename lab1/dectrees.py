@@ -1,10 +1,12 @@
 import monkdata as m
 import dtree as dt
 
+datasets  = [m.monk1,m.monk2,m.monk3]
+
 #Assignment 1
-init_entropy_monk1 = dt.entropy(m.monk1)
-init_entropy_monk2 = dt.entropy(m.monk2)
-init_entropy_monk3 = dt.entropy(m.monk3)
+init_entropy_monk1 = dt.entropy(datasets[0])
+init_entropy_monk2 = dt.entropy(datasets[1])
+init_entropy_monk3 = dt.entropy(datasets[2])
 
 #Printing results
 print "-------- Assignment 1 --------"
@@ -19,3 +21,14 @@ print "------------------------------"
 
 print "Assignment 2"
 print ""
+
+gain_monk1  = []
+gain_monk2  = []
+gain_monk3  = []
+for x in range(0, 6):
+  gain_monk1.append(dt.averageGain(datasets[0],m.attributes[x]))
+  gain_monk2.append(dt.averageGain(datasets[1],m.attributes[x]))
+  gain_monk3.append(dt.averageGain(datasets[2],m.attributes[x]))
+
+
+#dt.averageGain(monk1)
