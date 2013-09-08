@@ -1,0 +1,80 @@
+-------- Assignment 1 --------
+
+Monk1 entropy:  1.0
+Monk2 entropy:  0.957117428265
+Monk3 entropy:  0.999806132805
+
+------------------------------
+-------- Assignment 2 --------
+
+Dataset	A1		A2		A3		A4		A5		A6
+Monk1:  0.0752726	0.0058384	0.0047076	0.0263117	0.2870307	0.0007579
+Monk2:  0.0037562	0.0024585	0.0010561	0.0156642	0.0172772	0.0062476
+Monk3:  0.0071209	0.2937362	0.0008311	0.0028918	0.2559117	0.0070770
+
+------------------------------
+-------- Assignment 3 --------
+
+Dataset	A1		A2		A3		A4		A5		A6
+Part 1:  0.0000000	0.0000000	0.0000000	0.0000000	0.0000000	0.0000000
+Part 2:  0.0402168	0.0150635	0.0372726	0.0488922	0.0000000	0.0258073
+Part 3:  0.0330551	0.0021972	0.0179823	0.0191228	0.0000000	0.0451085
+Part 4:  0.2062907	0.0338984	0.0259061	0.0759329	0.0000000	0.0033240
+
+Own tree
+A5( True A4( False ) A6 False ) A1( False ))
+
+BuildTree function
+A5(+A4(---)A6(--)A1(--+))
+
+Building Trees
+Checking Full Tree
+Dataset	E train		E test
+Monk1	1.0000000 	0.8287037
+Monk1	1.0000000 	0.6921296
+Monk1	1.0000000 	0.9444444
+
+------------------------------
+-------- Assignment 4 --------
+
+-----  Mock1  -----
+Best tree found with split =  0.3 , pruned  0  times
+A5(+A6(A2(+A1(-+-)A1(--+))A1(A2(+--)A2(-+-)-))A1(A2(+--)A2(-+-)A2(+-+))A1(-A2(-+-)A2(+-+)))
+0.89189
+Best tree found with split =  0.4 , pruned  1  times
+A5(+A1(-A2(-+-)A2(--+))A3(A6(-+)A1(-A2(-+-)A2(--+)))A1(-A2(-+-)A2(+-+)))
+0.83673
+Best tree found with split =  0.5 , pruned  0  times
+A5(+A4(A3(+A1(A2(+--)--))-A2(A1(+--)-A1(--+)))A3(A6(A1(A2(+--)--)A2(+A1(-+-)+))-)A1(A2(+--)-A2(+-+)))
+0.77419
+Best tree found with split =  0.6 , pruned  2  times
+A5(+A2(A1(+--)-A1(--+))A6(-A3(+-))A1(A2(+--)A2(-+-)+))
+0.83784
+Best tree found with split =  0.7 , pruned  0  times
+A5(+A1(--A2(--+))A2(+A1(-+-)A1(--+))A1(-A2(-+-)A2(--+)))
+0.83721
+Best tree found with split =  0.8 , pruned  2  times
+A5(+--A1(--A2(--+)))
+0.77778
+
+-----  Mock3  -----
+Best tree found with split =  0.3 , pruned  1  times
+A2(A5(+++-)A5(+A1(+A4(+-+)+)A4(++A1(+-+))-)A4(A1(--A3(+-))--))
+0.94444
+Best tree found with split =  0.4 , pruned  2  times
+A2(A5(++A4(A1(--+)++)-)A5(++A4(++A1(+--))-)-)
+0.93750
+Best tree found with split =  0.5 , pruned  0  times
+A2(A5(++A4(A1(--+)++)-)A5(++A3(A4(+A1(--+)-)+)-)-)
+0.91803
+Best tree found with split =  0.6 , pruned  2  times
+A2(A5(++A1(A3(-+)++)-)A5(+++-)-)
+0.93151
+Best tree found with split =  0.7 , pruned  1  times
+A2(A5(+++-)+-)
+0.85882
+Best tree found with split =  0.8 , pruned  0  times
+A2(A5(+++-)+-)
+0.84536
+
+------------------------------
