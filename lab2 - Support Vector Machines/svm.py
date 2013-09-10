@@ -1,19 +1,10 @@
 from cvxopt.solvers import qp
 from cvxopt.base import matrix
-import numpy
+import numpy as np
 import pylab
 import random
 import math
 import scipy
-
-def functionname( parameters ):
-	"function_docstring"
-	function_suite
-	return [expression]
-
-
-
-
 
 classA = [(random.normalvariate(1.5, 1),
 	random.normalvariate(0.5, 1),
@@ -31,6 +22,25 @@ classB = [(random.normalvariate(0.0, 0.5),
 
 data = classA + classB
 random.shuffle(data)
+
+def polyKernels(datasetX, datasetY, power=1):
+	"Polynomial kernel function"
+	return math.pow(np.dot(datasetX, datasetY) + 1, power)
+
+
+def buildPMatrix(dataset1, dataset2, kernel):
+	P = matrix
+	for i in range(len(dataset1)):
+		for j in range(len(dataset2)):
+
+
+buildPMatrix(classA,classB,polyKernels)
+
+print classA
+print classB
+
+
+
 
 pylab.hold(True)
 pylab.plot([p[0] for p in classA],
