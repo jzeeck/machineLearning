@@ -2,8 +2,7 @@ function excercice1()
 %EXCERCICE1 Summary of this function goes here
 %   Detailed explanation goes here
 
-hand = imread('hand.ppm','ppm');
-book = imread('book.ppm','ppm');
+load_pics();
 
 data1 = normalize_and_label(hand, 0);
 data2 = normalize_and_label(book, 1);
