@@ -6,7 +6,7 @@ data1 = normalize_and_label(hand, 0);
 data2 = normalize_and_label(book, 1);
 test_data = [data1; data2];
 
-[mu sigma] = bayes(test_data)
+[mu sigma] = bayes(test_data);
 theta = [0:0.01:2*pi];
 x1 = 2*sigma(1,1)*cos(theta) + mu(1,1);
 y1 = 2*sigma(1,2)*sin(theta) + mu(1,2);

@@ -1,5 +1,6 @@
 function overlay_decision_boundary()
 
+show_pics();
 hand = imread('hand.ppm', 'ppm');
 book = imread('book.ppm', 'ppm');
 data1 = normalize_and_label(hand, 0);
