@@ -45,13 +45,23 @@ def indicator(xPoint, yPoint, alphaPoints, kernel, par1, par2):
 		indValue += alphaPoint[0]*alphaPoint[1][2]*kernel([xPoint, yPoint],[alphaPoint[1][0], alphaPoint[1][1]], par1, par2)
 	return indValue
 
-def svmMain(indata, kernel, figure, par1, par2):
+def svmMain(indata, kernel, figure, par1, par2, C):
 	print "Defining the variables needed for vecktor machine"
 	N = len(indata)
 	P = matrix(buildPMatrix(indata, kernel, par1, par2))
-	G = spmatrix(-1.0, range(N), range(N))
+	#G = spmatrix(-1.0, range(2*N), range(N))
+	G = np.zeros((2*N,N))
+	for i in range(0,N):
+		G[i,i] = -1.0
+	for i in range(N+1,2*N):
+		G[i,i-N] = -1.0
+	#print G
+	G = matrix(G)
 	q = matrix(np.linspace(-1,-1,N))
-	h = matrix(np.zeros(N))
+	h = matrix(np.zeros(2*N))
+	for i in range(N, (2*N)-1):
+		h[i] = C
+	#print h
 
 	print "Calling qp, solving the linear equation"
 	r = qp(P, q, G, h)
@@ -100,8 +110,8 @@ classA = [(random.normalvariate(-1.5, 1),
 	1.0)
 	for i in range(5)]
 
-classB = [(random.normalvariate(0.0, 0.5),
-	random.normalvariate(-0.5, 0.5),
+classB = [(random.normalvariate(0.0, 2),
+	random.normalvariate(-0.5, 2),
 	-1.0)
 	for i in range(10)]
 
@@ -110,16 +120,17 @@ random.shuffle(data)
 
 #kernels = [[linKernel,"Linear"], [polyKernels,"Polynomial"], [RBFKernel,"Radial Basis Function"], [sigmoidKernel,"Sigmoid"]]
 
-kernels = [[sigmoidKernel,"Sigmoid"]]
+kernels = [[RBFKernel,"Radial Basis Function"]]
 
 for ker in kernels:
-	for i in pylab.frange(0.1, 0.2, 0.05):
-		for j in pylab.frange(0.0, 0.2, 0.05):
-			f = pylab.figure()
-			f.canvas.set_window_title(ker[1])
-			f.suptitle("Sigmoid k %.3f, delta %.2f" % (i,j))
-			svmMain(data, ker[0],f.add_subplot(111), i, j)
-			f.savefig("SigmoidK%.3fDelta%.2f.png"%(i,j))
+	for par1 in pylab.frange(0.5, 0.5, 1.0):
+		for par2 in pylab.frange(0.0, 0.0, 1.0):
+			for C in pylab.frange(0.0, 0.0, 1):
+				f = pylab.figure()
+				f.canvas.set_window_title(ker[1])
+				f.suptitle("Radial Basis Function Sigma=%.2f.png"%(par1))
+				svmMain(data, ker[0],f.add_subplot(111), par1, par2, C)
+				f.savefig("Radial Basis Function Sigma=%.2f.png"%(par1))
 
 print "Done!"
 pylab.show()
