@@ -54,7 +54,7 @@ def svmMain(indata, kernel, figure, par1, par2, C):
 	for i in range(0,N):
 		G[i,i] = -1.0
 	for i in range(N+1,2*N):
-		G[i,i-N] = -1.0
+		G[i,i-N] = 1.0
 	#print G
 	G = matrix(G)
 	q = matrix(np.linspace(-1,-1,N))
