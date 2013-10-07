@@ -16,7 +16,5 @@ class = class - 1;
 error_test = 1.0 - sum(class == test_data(:,end))/20
 
 [mu sigma p alpha classes] = adaboost(test_data, 6)
-
-
 end
 

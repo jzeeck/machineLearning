@@ -5,18 +5,21 @@ function [mu, sigma, p, alpha, classes] = adaboost(data, T)
 [M, N] = size(data);
 
 w(1:M) = 1/M;
-p = zeros(T,2);
+p = zeros(2,T);
 alpha = zeros(T,1);
 classes = [0,1];
 
 for t = 1:T
+    p(:,t) = prior(data, w);
     [mu(:,:,t), sigma(:,:,t)] =  bayes_weight(data, w);
-    p(t,:) = prior(data, w);
-    h = discriminant(data(:,1:2), mu(:,:,t), sigma(:,:,t), p(t,:));
-    h = h(:,1) - h(:,2);
+
+    h = discriminant(data(:,1:2), mu(:,:,t), sigma(:,:,t), p(:,t));
+    [~, class] = max(h, [], 2);
+    class = class - 1;
+
     sum = 0;
     for m = 1:M
-        sum = sum + w(m)*delta_func(h(m), data(m,3));
+        sum = sum + w(m)*delta_func(class(m), data(m,3));
     end
     error = 1 - sum;
     
@@ -24,7 +27,7 @@ for t = 1:T
     
     Z = 0;
     for m = 1:M
-        if delta_func(h(m),data(m,3)) == 1
+        if delta_func(class(m),data(m,3)) == 1
             w(m) = w(m)*exp(-alpha(t));
         else
             w(m) = w(m)*exp(alpha(t));
