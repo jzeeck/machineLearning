@@ -8,6 +8,8 @@ w(1:M) = 1/M;
 p = zeros(2,T);
 alpha = zeros(T,1);
 classes = [0,1];
+global global_hyp
+global_hyp = zeros(M,T);
 
 for t = 1:T
     p(:,t) = prior(data, w);
@@ -16,6 +18,7 @@ for t = 1:T
     h = discriminant(data(:,1:2), mu(:,:,t), sigma(:,:,t), p(:,t));
     [~, class] = max(h, [], 2);
     class = class - 1;
+    global_hyp(:,t) = class;
 
     sum = 0;
     for m = 1:M

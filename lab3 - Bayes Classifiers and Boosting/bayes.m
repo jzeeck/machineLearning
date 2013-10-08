@@ -12,8 +12,8 @@ for i=1:size(data,1)
     mu(class + 1 , 2) = mu(class + 1, 2) + data(i,2);
 end
 
-mu(:,1) = mu(:,1)/M(1);
-mu(:,2) = mu(:,2)/M(2);
+mu(1,:) = mu(1,:)/M(1);
+mu(2,:) = mu(2,:)/M(2);
 
 sigma = [0,0;0,0];
 for i=1:size(data,1)
@@ -21,8 +21,8 @@ for i=1:size(data,1)
     sigma(class + 1, 1) = sigma(class + 1, 1) + (data(i,1) - mu(class + 1, 1)).^2;
     sigma(class + 1, 2) = sigma(class + 1, 2) + (data(i,2) - mu(class + 1, 2)).^2;
 end
-sigma(:,1) = sigma(:,1)/M(1);
-sigma(:,2) = sigma(:,2)/M(2);
+sigma(1,:) = sigma(1,:)/M(1);
+sigma(2,:) = sigma(2,:)/M(2);
 sigma = sqrt(sigma);
 
 end

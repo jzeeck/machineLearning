@@ -1,6 +1,6 @@
 function overlay_decision_boundary()
 
-show_pics();
+%show_pics();
 hand = imread('hand.ppm', 'ppm');
 book = imread('book.ppm', 'ppm');
 data1 = normalize_and_label(hand, 0);
@@ -8,6 +8,9 @@ data2 = normalize_and_label(book, 1);
 test_data = [data1; data2];
 [mu sigma] = bayes(test_data);
 p = prior(test_data);
+hold on
+plot(data2(:,1), data2(:,2), '.');
+plot(data1(:,1), data1(:,2), '.r');
 
 ax = [0.2 0.5 0.2 0.45];
 axis(ax);

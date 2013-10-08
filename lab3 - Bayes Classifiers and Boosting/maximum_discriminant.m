@@ -14,4 +14,10 @@ g = discriminant(test_data(:,1:2), mu, sigma, p);
 class = class - 1;
 error_test = 1.0 - sum(class == test_data(:,end))/M
 
+
+T = 6;
+[mu, sigma, p, alpha, classes] = adaboost(test_data, T);
+class = adaboost_discriminant(test_data(:,1:N-1), mu, sigma, p, alpha, classes, T);
+boost_error_test = 1.0-sum(class == test_data(:,end))/M
+
 end
