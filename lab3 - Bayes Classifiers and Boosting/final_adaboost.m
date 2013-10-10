@@ -4,7 +4,7 @@ function [ output_args ] = final_adaboost( input_args )
 data1 = normalize_and_label(hand, 0);
 data2 = normalize_and_label(book, 1);
 data = [data1; data2];
-T = 100;
+T = 6;
 [mu, sigma, p, alpha, classes] = adaboost(data, T);
 
 book_rg = zeros(size(book,1), size(book,2), 2);
