@@ -3,3 +3,6 @@ run:
 
 cartoon:
 	python cartoon.py &
+
+q:
+	python q_learning.py 

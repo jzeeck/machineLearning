@@ -27,7 +27,7 @@ trans = ((1, 3, 4, 12),
 	(15, 13, 10, 2),
 	(14, 12, 11, 3))
 
-gamma = 0.5
+gamma = 0.9
 policy = [None for s in trans]
 value = [0 for s in trans]
 
@@ -62,7 +62,7 @@ print policy
 print value
 
 #init start state
-current_state = 4
+current_state = 0
 number_of_steps = 100
 walk_cycle = [-1 for i in range(number_of_steps)]
 for i in range(number_of_steps):
