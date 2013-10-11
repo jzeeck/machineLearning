@@ -1,3 +1,5 @@
+from animate import * 
+
 def argmax(f, args):
 	mi = None
 	m = -1e10
@@ -29,22 +31,22 @@ gamma = 0.5
 policy = [None for s in trans]
 value = [0 for s in trans]
 
-rew = ((0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0),
-	(0, 0, 0, 0))
+rew = ((1, 0, 1, 0),
+	(-1, 1, -1, 0),
+	(1, -1, -1, 0),
+	(-1, 0, 1, 0),
+	(-1, 0, -1, 1),
+	(0, 1, 0, 1),
+	(1, -1, 0, 0),
+	(-1, 0, -1, 1),
+	(-1, 0, 1, -1),
+	(0, 0, 1, -1),
+	(1, -1, 1, -1),
+	(-1, 1, 0, -1),
+	(1, 0, -1, 0),
+	(-1, 1, -1, 0),
+	(0, -1, -1, 1),
+	(0, 1, 0, 1))
 
 for p in range(100):
 	for s in range(len(policy)):
@@ -55,4 +57,22 @@ for p in range(100):
 	for s in range(len(value)):
 		a = policy[s]
 		value[s] = rew[s][a] + gamma * value[trans[s][a]]
+
+print policy
+print value
+
+#init start state
+current_state = 4
+number_of_steps = 100
+walk_cycle = [-1 for i in range(number_of_steps)]
+for i in range(number_of_steps):
+	walk_cycle[i] = current_state
+	current_state = trans[current_state][policy[current_state]]
+
+print walk_cycle
+
+draw(walk_cycle)
+
+
+
 
