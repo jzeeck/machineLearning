@@ -79,6 +79,12 @@ for i in range(len(policy)):
 
 print "policy: ", policy
 
+dotg = [0 for s in trans]
+for i in range(len(policy)):
+	dotg[i] = trans[i][policy[i]]
+	
+print "transistions: ", dotg
+
 #init start state
 current_state = 10
 number_of_steps = 100
