@@ -32,10 +32,10 @@ policy = [None for s in trans]
 value = [0 for s in trans]
 
 rew = ((0, 0, 0, 0),
-	(0, 0, 0, 0),
+	(0, 1, 0, 0),
 	(0, 0, 0, 0),
 	(0, 0, 1, -1),
-	(0, 0, 0, 0),
+	(0, 0, 0, 1),
 	(0, 0, 0, 0),
 	(0, 0, 0, 0),
 	(0, 0, 0, 0),
@@ -58,8 +58,14 @@ for p in range(100):
 		a = policy[s]
 		value[s] = rew[s][a] + gamma * value[trans[s][a]]
 
-print policy
-print value
+print "policy: ", policy
+print "value: ", value
+
+dotg = [0 for s in trans]
+for i in range(len(policy)):
+	dotg[i] = trans[i][policy[i]]
+	
+print "transistions: ", dotg
 
 #init start state
 current_state = 10
@@ -69,7 +75,7 @@ for i in range(number_of_steps):
 	walk_cycle[i] = current_state
 	current_state = trans[current_state][policy[current_state]]
 
-print walk_cycle
+print "walk cycle: ", walk_cycle
 
 draw(walk_cycle)
 
