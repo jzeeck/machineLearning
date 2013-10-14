@@ -27,26 +27,26 @@ trans = ((1, 3, 4, 12),
 	(15, 13, 10, 2),
 	(14, 12, 11, 3))
 
-gamma = 0.9
+gamma = 0.5
 policy = [None for s in trans]
 value = [0 for s in trans]
 
-rew = ((1, 0, 1, 0),
-	(-1, 1, -1, 0),
-	(1, -1, -1, 0),
-	(-1, 0, 1, 0),
-	(-1, 0, -1, 1),
-	(0, 1, 0, 1),
-	(1, -1, 0, 0),
-	(-1, 0, -1, 1),
-	(-1, 0, 1, -1),
+rew = ((0, 0, 0, 0),
+	(0, 0, 0, 0),
+	(0, 0, 0, 0),
 	(0, 0, 1, -1),
-	(1, -1, 1, -1),
-	(-1, 1, 0, -1),
-	(1, 0, -1, 0),
-	(-1, 1, -1, 0),
-	(0, -1, -1, 1),
-	(0, 1, 0, 1))
+	(0, 0, 0, 0),
+	(0, 0, 0, 0),
+	(0, 0, 0, 0),
+	(0, 0, 0, 0),
+	(0, 0, 0, 0),
+	(0, 0, 0, 0),
+	(0, 0, 0, 0),
+	(0, 1, 0, 0),
+	(1, -1, 0, 0),
+	(0, 1, 0, 0),
+	(0, 0, 0, 1),
+	(0, 0, 0, 0))
 
 for p in range(100):
 	for s in range(len(policy)):
@@ -62,7 +62,7 @@ print policy
 print value
 
 #init start state
-current_state = 0
+current_state = 10
 number_of_steps = 100
 walk_cycle = [-1 for i in range(number_of_steps)]
 for i in range(number_of_steps):
